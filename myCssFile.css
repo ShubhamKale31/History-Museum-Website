@@ -1,0 +1,498 @@
+/*
+Kale, Shubham
+CS545
+Red id 822707841
+Assignment #2
+Fall 2018
+*/
+
+body{
+	background-color:#DCDCDC;
+}
+div.header{
+	background-color: #8B4513;
+	width: 100%;
+	height: 250px;
+}
+
+/*CSS code for the different headers */
+h1{
+	text-align: center;
+	color: white;
+	padding-top:40px;
+}
+h2{
+	text-align: center;
+	color: #8B4513;
+}
+h3{
+	text-align: left;
+	color: #A0522D;
+	padding-left:5px;
+}
+
+div.mainMenu{
+	width: 100%;
+	display: inline;
+	
+}
+/*Styling for logo image */
+img.logo{
+	float: left;
+	margin: 10px 30px 10px 20px;
+	height: 90%;
+	width:375px;
+}
+
+/*CSS code for navigation bar*/
+ul.menu {
+    list-style-type: none;
+    margin-left: 600px;
+	margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8B4513;
+}
+
+ul.menu li {
+    float: left;
+}
+
+ul.menu li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/*Style when hovered on the nav bar items */
+ ul.menu li a:hover {
+    background-color: #CD853F;
+    color: #ffffff;
+}
+
+/*CSS code for footer */
+div.footer{
+	background-color: #8B4513;
+	width: 100%;
+	height: 125px;
+	position: relative;
+}
+
+div.footer1{
+	width: 30%;
+	float:left;
+	margin:10px;
+	padding-left:30px;
+}
+
+div.footer2{
+	width: 30%;
+	float:left;
+	margin:10px;
+}
+
+div.footer3{
+	width: 30%;
+	float:right;
+	margin:10px;
+}
+
+span.footerLogos{
+	float: right;
+	margin-right: 45%
+}
+/*Style for footer icons */
+img.icon{
+	height: 30px;
+	width: auto;
+}
+
+div.wrap{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:500px;
+	display:block;
+}
+
+/*CSS code for the different columns on main page */
+div.one{
+    width: 33%;
+	background-color: #FFFFFF;
+	height:450px;
+	float:left;
+	margin:20px 5px;
+	padding:10px;
+    }
+	
+div.one img.skull{
+	width: auto;
+	height : 200px;
+	max-height: 50%;
+	max-width: 30%;;
+	float: left;
+	padding:20px 10px;
+}
+
+div.one p{
+padding: 5px;
+margin:5px;	
+}
+
+div.two {
+    width: 30%;
+    background-color: #FFFFFF;
+	height:430px;
+	float:left;
+	margin:20px 5px;
+	padding:20px 10px;
+	}
+
+div.three {
+    width: 30%;
+    background-color: #FFFFFF;
+	height:450px;
+	float:right;
+	margin:20px 5px;
+	padding:10px;
+}
+div.three img.desert{
+	width: auto;
+	height : auto;
+	max-height: 30%;
+	max-width: 50%;;
+	float: right;
+	padding:5px;
+}
+/*CSS code for the different columns on About page */
+div.wrapAbout{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:650px;
+	display:block;
+}
+div.aboutOne{
+    width: 65%;
+	background-color: #FFFFFF;
+	float:left;
+	margin:20px 5px;
+	padding:10px;
+    }
+	
+div.aboutOne img.wildflower{
+	width: auto;
+	height : auto;
+	max-height: 50%;
+	max-width: 30%;;
+	float: left;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+div.aboutOne img.beach{
+	width: auto;
+	height : auto;
+	max-height: 30%;
+	max-width: 50%;;
+	float: right;
+	padding:5px;
+}
+
+div.aboutTwo {
+    width: 30%;
+    background-color: #FFFFFF;
+	height:605px;
+	float:right;
+	margin:20px 5px;
+	padding:10px;
+}
+/*CSS code for the different columns on Contact page */
+div.wrapContact{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:250px;
+	display:block;
+}
+
+div.contactOne{
+    width: 33%;
+	background-color: #FFFFFF;
+	float:left;
+	margin:20px 5px;
+	padding:10px;
+    }
+div.contactOne img.location{
+	width: auto;
+	height : auto;
+	max-height: 30%;
+	max-width: 50%;;
+	float: left;
+	padding:10px;
+}
+
+div.contactTwo{
+    width: 27%;
+	background-color: #FFFFFF;
+	float:left;
+	margin:20px 5px;
+	padding:10px;
+    }
+	
+div.contactTwo img.call{
+	width: auto;
+	height : auto;
+	max-height: 30%;
+	max-width: 50%;;
+	float: left;
+	padding:10px;
+}
+
+div.contactThree{
+    width: 33%;
+	background-color: #FFFFFF;
+	float:right;
+	margin:20px 5px;
+	padding:10px;
+    }	
+
+div.contactThree img.message{
+	width: auto;
+	height : auto;
+	max-height: 10%;
+	max-width: 50%;;
+	float: left;
+	padding:10px;
+}
+
+img.map{
+	width:1200px;
+	margin-left:60px;
+}
+/*CSS code for the different columns on Exhibit page */
+div.wrapExhibit{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:775px;
+	display:block;
+}
+div.exhibitOne{
+    width: 75%;
+	background-color: #FFFFFF;
+	float:left;
+	margin:20px 5px;
+	padding:10px;
+    }
+	
+div.exhibitOne img.mineralogy{
+	width: auto;
+	height : auto;
+	max-height: 30%;
+	max-width: 25%;;
+	float: left;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+div.exhibitOne img.plant{
+	width: 250px;
+	float: right;
+	padding:5px;
+}
+
+div.exhibitOne img.dinosaur{
+	width: auto;
+	height : auto;
+	max-height: 30%;
+	max-width: 25%;;
+	float: left;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+div.exhibitOne img.iceage{
+	width: 250px;
+	float: right;
+	padding:5px;
+}
+
+div.exhibitTwo img.macdonalds
+{
+	height:755px;
+	width:280px;
+	padding:20px 10px;
+}
+/*CSS code for the different columns on Events page */
+div.wrapEvents{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:1250px;
+	display:block;
+}
+div.eventsOne{
+    width: 74%;
+	background-color: #FFFFFF;
+	float:left;
+	margin:20px 5px;
+	padding:20px;
+    }
+
+div.eventsTwo img.googleCalendar
+{
+	height:500px;
+	width:260px;
+	padding:20px 15px;
+}
+
+div.eventsOne h2.calendar{
+	text-align:left;
+}
+
+div.eventsTopLeft{
+    width: 40%;
+	float:left;
+	margin:0px 5px;
+	padding:20px;
+    }
+div.eventsTopLeft img{
+	width:400px;
+}
+
+div.eventsTopRight{
+    width: 40%;
+	float:right;
+	margin:0px 5px;
+	padding:20px;
+    }
+	
+div.eventsTopRight img{
+	width:400px;
+}
+
+div.eventsBottomLeft{
+    width: 40%;
+	float:left;
+	margin:0px 5px;
+	padding:20px;
+    }
+div.eventsBottomLeft img{
+	width:400px;
+}
+
+div.eventsBottomRight{
+    width: 40%;
+	float:right;
+	margin:0px 5px;
+	padding:20px;
+    }
+	
+div.eventsBottomRight img{
+	width:400px;
+}
+
+/*CSS code for the different columns on Science page */
+div.wrapScience{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:1200px;
+	display:block;
+}
+div.scienceOne{
+    width: 70%;
+	background-color: #FFFFFF;
+	float:left;
+	margin:20px 5px;
+	padding:30px;
+    }
+	
+div.scienceOne h2.science{
+	text-align:left;
+}
+
+div.scienceOneLeft{
+    width: 40%;
+	float:left;
+	margin:0px 5px;
+	padding:20px;
+    }
+div.scienceOneLeft img{
+	width:400px;
+	height:250px;
+}
+
+div.scienceOneRight{
+    width: 40%;
+	float:left;
+	margin:0px 5px;
+	padding:20px;
+    }
+div.scienceOneRight img{
+	width:400px;
+	height:250px;
+}
+	
+div.scienceTwo{
+    width: 20%;
+	background-color: #FFFFFF;
+	float:right;
+	margin:20px 5px;
+	padding:20px;
+    }
+/*CSS code for the different columns on Join page */
+div.wrapJoin{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:1150px;
+	display:block;
+}
+div.joinOne{
+    width: 70%;
+	background-color: #FFFFFF;
+	float:left;
+	margin:20px 5px;
+	padding:30px;
+    }
+div.joinOne h2{
+	text-align:left;
+}
+div.joinOneLeft{
+    width: 40%;
+	float:left;
+	margin:0px 5px;
+	padding:30px;
+    }
+div.joinOneLeft img{
+	width:400px;
+	height:250px;
+}
+
+div.joinOneRight{
+    width: 40%;
+	float:left;
+	margin:0px 5px;
+	padding:30px;
+    }
+div.joinOneRight img{
+	width:400px;
+	height:250px;
+}
+	
+div.joinTwo img.hall{
+	height:700px;
+	width:260px;
+	padding:20px 15px;
+    }
+
+
+
+
+
+
+
+
+
