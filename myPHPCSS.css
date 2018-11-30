@@ -1,0 +1,260 @@
+/*
+Kale, Shubham
+CS545
+Red id 822707841
+Assignment #3
+Fall 2018
+*/
+
+body{
+	background-color:#DCDCDC;
+}
+div.header{
+	background-color: #8B4513;
+	width: 100%;
+	height: 250px;
+}
+
+/*CSS code for the different headers */
+h1{
+	text-align: center;
+	color: white;
+	padding-top:40px;
+}
+h2{
+	text-align: center;
+	color: #8B4513;
+}
+h3{
+	text-align: left;
+	color: #A0522D;
+	padding-left:5px;
+}
+
+div.mainMenu{
+	width: 100%;
+	display: inline;
+	
+}
+/*Styling for logo image */
+img.logo{
+	float: left;
+	margin: 10px 30px 10px 20px;
+	height: 90%;
+	width:375px;
+}
+
+/*CSS code for navigation bar*/
+ul.menu {
+    list-style-type: none;
+    margin-left: 600px;
+	margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8B4513;
+}
+
+ul.menu li {
+    float: left;
+}
+
+ul.menu li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/*Style when hovered on the nav bar items */
+ ul.menu li a:hover {
+    background-color: #CD853F;
+    color: #ffffff;
+}
+/* Button */
+
+.button {
+    background-color: #005293;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#submit {
+    text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #DCDCDC;
+}
+
+/* Column container */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Sidebar/left column */
+.leftside {
+    flex: 30%;
+    background-color: #DCDCDC;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.leftside img {
+    width: 40%;
+    padding: 5px;
+    margin: 0px;
+    float: left;
+}
+
+.event2 img{
+    float: right;
+    padding: 5px;
+}
+
+/* Sidebar/right column */
+.rightside {
+    flex: 30%;
+    background-color: #DCDCDC
+    padding: 20px;
+	margin-top:20px;
+}
+
+.rightside img {
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+}
+
+.rightside p {
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pop {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+}
+
+.main {
+    flex: 40%;
+    background-color:#DCDCDC;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.exhibitmain {
+    flex: 65%;
+    background-color:#DCDCDC;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ .exhibitmain img {
+    width: 25%;
+    padding: 5px;
+    margin: 0px;
+    float: left;
+ }
+
+ .exhibitmain h3 {
+     padding: 0px;
+     margin: 5px;
+ }
+
+ .exhibitmain h5 {
+    padding: 0px;
+    margin: 5px;
+}
+
+.involve {
+    flex: 70%;
+    background-color:#DCDCDC;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.involve img {
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+ }
+
+.pop div {
+    margin-bottom: 60px;
+	margin-top: 50px;
+}
+
+.other img{
+    float:right
+}
+
+.pop h2 {
+    text-align: center;
+    
+}
+
+.required {
+    color: red;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+
+
+/*CSS code for footer */
+div.footer{
+	background-color: #8B4513;
+	width: 100%;
+	height: 125px;
+	position: relative;
+}
+
+div.footer1{
+	width: 30%;
+	float:left;
+	margin:10px;
+	padding-left:30px;
+}
+
+div.footer2{
+	width: 30%;
+	float:left;
+	margin:10px;
+}
+
+div.footer3{
+	width: 30%;
+	float:right;
+	margin:10px;
+}
+
+span.footerLogos{
+	float: right;
+	margin-right: 45%
+}
+/*Style for footer icons */
+img.icon{
+	height: 30px;
+	width: auto;
+}
+
+div.wrap{
+	width:auto;
+	margin:0 auto;
+	border:0px solid;
+	height:500px;
+	display:block;
+}

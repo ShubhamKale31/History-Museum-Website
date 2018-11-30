@@ -447,7 +447,7 @@ div.wrapJoin{
 	width:auto;
 	margin:0 auto;
 	border:0px solid;
-	height:1150px;
+	height:1250px;
 	display:block;
 }
 div.joinOne{
@@ -460,6 +460,25 @@ div.joinOne{
 div.joinOne h2{
 	text-align:left;
 }
+#headButton{
+	text-align: center;
+	color: #8B4513;
+}
+
+#signupbutton{
+text-align:center;
+}
+.button{
+	float:center;
+    background-color: #8B4513;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
 div.joinOneLeft{
     width: 40%;
 	float:left;
