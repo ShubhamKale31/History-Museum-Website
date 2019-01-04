@@ -4,20 +4,25 @@ session_start();
 
 <!DOCTYPE html> 
 <html lang="en">
+
 <!--
 Kale, Shubham
 CS545
 Red id 822707841
-Assignment #3
+Assignment #4
+Instructor: Cyndi Chie
 Fall 2018
 -->
 <head>
 	<title>Shubham Kale CS 545 Assignment 2</title>
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" type="text/css" href="myPHPCSS.css"/>
+	<script type="text/javascript" src="form_validation.js"></script>
+	<script type="text/javascript" src="test.js"></script>
+
 </head>
 
-<body>
+<body onload="getLastModified()">
     <div class="container">
         <div class="header">
         	<img src="img/image1.jpg" alt="Logo" class="logo" />
@@ -42,8 +47,8 @@ Fall 2018
 
 	
 		<?php
-		$fnameErr = $lnameErr = $phoneErr= $emailErr = $eventErr = $tattendees5Err= $tattendees12Err= $tattendees17Err= $tattendees18Err= "";
-		$name = $email = $event = $tattendeesErr= /*$tattendees=*/ $tattendees5= $tattendees12= $tattendees12= $tattendees18="" ;
+		$fnameErr = $lnameErr = $phoneErr= $emailErr = $eventErr = $tattendees5Err= $tattendees12Err= $tattendees17Err= $tattendees18Err= $total= "";
+		$name = $email = $event = $tattendeesErr= $tattendees5= $tattendees12= $tattendees12= $tattendees18="" ;
 
 		$errors=array();
 		
@@ -122,7 +127,7 @@ Fall 2018
 				$_SESSION['event'] = test_input(filter_input(INPUT_POST, "event"));
 			}
 			
-			if (empty($_POST["tattendees5"])) {
+			if (!is_numeric($_POST["tattendees5"])) {
 				$valid = false;
 				$tattendees5Err = "No. of attendees under the age of 5 is required";
 			} else {
@@ -136,7 +141,7 @@ Fall 2018
 				}
 			}
 			
-			if (empty($_POST["tattendees12"])) {
+			if (!is_numeric($_POST["tattendees12"])) {
 				$valid = false;
 				$tattendees12Err = "No. of attendees between 5 and 12 is required";
 			} else {
@@ -150,7 +155,7 @@ Fall 2018
 				}
 			}
 			
-			if (empty($_POST["tattendees17"])) {
+			if (!is_numeric($_POST["tattendees17"])) {
 				$valid = false;
 				$tattendees17Err = "No. of attendees between 13 and 17 is required";
 			} else {
@@ -164,7 +169,7 @@ Fall 2018
 				}
 			}
 	  
-			if (empty($_POST["tattendees18"])) {
+			if (!is_numeric($_POST["tattendees18"])) {
 				$valid = false;
 				$tattendees18Err = "No. of attendees who are above 18yrs old required";
 			} else {
@@ -245,26 +250,43 @@ Fall 2018
 							<br/><br/>
 		
   
-						    <label for="under5">Number of attendees under 5 years old:</label><br />
-						    <input type="number" name="tattendees5"  value="<?php echo $tattendees5;?>">
+						    <label >Number of attendees under 5 years old:</label><br />
+						    <input type="number" name="tattendees5" id="tattendees5"  value="" onchange = "getTotal();" 
+							onkeypress = "this.onchange();"
+							onpaste = "this.onchange();" 
+							oninput = "this.onchange();"/>
 						    <span class="error">* <?php echo $tattendees5Err;?></span>
 						    <br/><br/>
 							
-						    <label for="bet5&12">Number of attendees 6 to 12 years old:</label><br />
-							<input type="number" name="tattendees12" value="<?php echo $tattendees12;?>">
+						    <label>Number of attendees 6 to 12 years old:</label><br />
+							<input type="number" name="tattendees12" id="tattendees12" value="" onchange = "getTotal();"
+							onkeypress = "this.onchange();" 
+							onpaste = "this.onchange();" 
+							oninput = "this.onchange();"/>
 						    <span class="error">* <?php echo $tattendees12Err;?></span>
 						    <br/><br/>
 							
-							<label for="bet13&17">Number of attendees 13 to 17 years old:</label><br />
-							<input type="number" name="tattendees17" value="<?php echo $tattendees17;?>">
+							<label>Number of attendees 13 to 17 years old:</label><br />
+							<input type="number" name="tattendees17" id="tattendees17" value="" onchange = "getTotal();"
+							onkeypress = "this.onchange();" 
+							onpaste = "this.onchange();" 
+							oninput = "this.onchange();"/>
 							<span class="error">* <?php echo $tattendees17Err;?></span>
 							<br/><br/>
  
-							<label for="above18"> Number of attendees 18+ years old:</label><br />
-							<input type="number" name="tattendees18" value="<?php echo $tattendees18;?>">
+							<label> Number of attendees 18+ years old:</label><br />
+							<input type="number" name="tattendees18" id="tattendees18" value="" onchange = "getTotal();"
+							onkeypress = "this.onchange();" 
+							onpaste = "this.onchange();" 
+							oninput = "this.onchange();"/>
 							<span class="error">* <?php echo $tattendees18Err;?></span>
 							<br/><br/>
 							
+						
+							<label>Total:</label><br/>
+							<input  type="number" id="total" readonly="readonly" value="0"/>
+							<br/><br/>
+					
 							<label for="signup">Signup for newsletter:</label><br />
 							<input type="checkbox" name="yes" value="yes" checked>Yes
 							<input type="checkbox" name="no" value="no">No<br>
@@ -310,7 +332,10 @@ Fall 2018
 
         <!-- Footer -->
         <div class="footer">
+			
 		<div class="footer1">
+			<label class="last_modified_time" id="lastmodified_label">Last Modified at: </label>
+			<label class="last_modified_time" id="lastmodified"></label><br/>
 			<p>San Diego State University <br/> Natural History Museum <br/> San Diego, CA <br/><a href="tel:1-619-594-5200">(619) 594-5200 </a><br/> </p>
 		</div>
 		

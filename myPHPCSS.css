@@ -2,7 +2,8 @@
 Kale, Shubham
 CS545
 Red id 822707841
-Assignment #3
+Assignment #4
+Instructor: Cyndi Chie
 Fall 2018
 */
 
@@ -257,4 +258,11 @@ div.wrap{
 	border:0px solid;
 	height:500px;
 	display:block;
+}
+
+.last_modified_time {
+	font-size: 17px;
+    color: white;
+    margin-left: 0px;
+	float: left;
 }
